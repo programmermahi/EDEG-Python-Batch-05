@@ -1,0 +1,15 @@
+number = input("Enter a positive integer: ")
+
+if number.isdigit():
+    
+    digit_sum = sum(map(int, number))
+    print(f"The sum of the digits of {number} is: {digit_sum}")
+else:
+    print("Invalid input. Please enter a positive integer.")
+
+
+n = 12345
+sum = 0
+for digit in str(n):  
+    sum += int(digit)       
+print(sum)

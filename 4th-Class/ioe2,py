@@ -1,0 +1,14 @@
+# List of items (could be numbers, strings, or other objects)
+items = [42, 42, "hello", "hello", [1, 2, 3], [1, 2, 3], 42]
+
+# Create a set to keep track of unique object IDs
+seen_ids = set()
+
+# Iterate over the list and check for identical objects
+print("Identical objects in the list:")
+for index, item in enumerate(items):
+    item_id = id(item)  # Get the memory ID of the item
+    if item_id in seen_ids:
+        print(f"Item at index {index} is the same object as a previous one: {item}")
+    else:
+        seen_ids.add(item_id)
